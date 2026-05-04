@@ -1,5 +1,6 @@
 package tests;
 
+import models.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -12,6 +13,19 @@ public class LoginTests extends TestBase{
         if(app.getHelperUser().isLogged()){
             app.getHelperUser().logout();
         }
+    }
+
+    @Test
+    public void loginSuccess1 (){
+        User user =new User().setEmail("margo@gmail.com").setPassword("Mmar123456$");
+//        user.setEmail("margo@gmail.com");
+//        user.setPassword("Mmar123456$");
+
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm(user);
+        app.getHelperUser().submitLogin();
+
+        Assert.assertTrue(app.getHelperUser().isLogged());
     }
 
   @Test
