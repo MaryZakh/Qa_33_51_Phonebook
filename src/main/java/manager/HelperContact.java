@@ -49,4 +49,8 @@ public class HelperContact extends HelperBase {
         }
         return false;
     }
+
+    public boolean isAddContactPageStillDisplayed() {
+        return isElementPresent(By.cssSelector("a.active[href='/add']"));
+    }
 }

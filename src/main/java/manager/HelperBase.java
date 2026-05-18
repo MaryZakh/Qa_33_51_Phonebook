@@ -1,9 +1,13 @@
 package manager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.google.common.io.Files;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 public class HelperBase {
@@ -18,9 +22,15 @@ public class HelperBase {
         WebElement element = wd.findElement(locator);
         element.click();
         element.clear();
+        clearNew(element);
         if (text != null) {
             element.sendKeys(text);
         }
+    }
+
+    public void clearNew(WebElement element) {
+        element.sendKeys(" ");
+        element.sendKeys(Keys.BACK_SPACE);
     }
 
     public void click(By locator){
@@ -37,6 +47,32 @@ public class HelperBase {
         try {
             Thread.sleep(time);
         } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public boolean isAlertPresent(String message) {
+        Alert alert = new WebDriverWait(wd, Duration.ofSeconds(10))
+                .until(ExpectedConditions.alertIsPresent());
+        System.out.println(alert.getText());
+        if (alert != null && alert.getText().contains(message)) {
+            // System.out.println(alert.getText());
+            //click OK -->alert.accept();
+            // click cancel -->alert.dismiss();
+            //type into alert -->alert.sendKeys("text");
+            //pause(2000);
+            alert.accept();
+            return true;
+        }
+        return false;
+    }
+
+    public void getScreen(String link) {
+        TakesScreenshot takesScreenshot = (TakesScreenshot) wd;
+     File tmp =  takesScreenshot.getScreenshotAs(OutputType.FILE);
+        try {
+            Files.copy(tmp,new File(link));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
