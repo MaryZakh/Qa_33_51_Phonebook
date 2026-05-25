@@ -4,6 +4,8 @@ import com.google.common.io.Files;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,6 +14,8 @@ import java.util.List;
 
 public class HelperBase {
     WebDriver wd;
+    Logger logger = LoggerFactory.getLogger(HelperBase.class);
+
 
     public HelperBase(WebDriver wd) {
         this.wd = wd;
@@ -33,17 +37,17 @@ public class HelperBase {
         element.sendKeys(Keys.BACK_SPACE);
     }
 
-    public void click(By locator){
+    public void click(By locator) {
         WebElement element = wd.findElement(locator);
         element.click();
     }
 
-    public boolean isElementPresent(By locator){
-        List<WebElement>list = wd.findElements(locator);
-        return list.size()>0;
+    public boolean isElementPresent(By locator) {
+        List<WebElement> list = wd.findElements(locator);
+        return list.size() > 0;
     }
 
-    public void pause(int time){
+    public void pause(int time) {
         try {
             Thread.sleep(time);
         } catch (InterruptedException e) {
@@ -69,11 +73,20 @@ public class HelperBase {
 
     public void getScreen(String link) {
         TakesScreenshot takesScreenshot = (TakesScreenshot) wd;
-     File tmp =  takesScreenshot.getScreenshotAs(OutputType.FILE);
+        File tmp = takesScreenshot.getScreenshotAs(OutputType.FILE);
         try {
-            Files.copy(tmp,new File(link));
+            Files.copy(tmp, new File(link));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public boolean isNoContactsHereDisplayed() {
+        WebDriverWait wait = new WebDriverWait(wd, Duration.ofSeconds(5));
+        boolean res =  wait.until(ExpectedConditions
+                .textToBePresentInElement(wd.findElement(By.cssSelector(".contact-page_message__2qafk>h1"))
+                        ,"No Contacts here!"));
+        return res;
+
     }
 }
