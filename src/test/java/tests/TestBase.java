@@ -17,26 +17,25 @@ public class TestBase {
 
     static ApplicationManager app = new ApplicationManager();
 
-@BeforeSuite
+    @BeforeSuite
     public void setUp() {
         app.init();
     }
 
     @BeforeMethod
-    public void startLogger(Method m){
-    logger.info("Name of method (test) -->"+m.getName());
+    public void startLogger(Method m) {
+        logger.info("Name of method (test) -->" + m.getName());
     }
 
     @AfterMethod
-    public void end(){
-    logger.info("==============================================");
+    public void end() {
+        logger.info("==============================================");
     }
 
 
-
-@AfterSuite
+    @AfterSuite
     public void tearDown() {
-       // app.stop();
+        app.stop();
     }
 
 }

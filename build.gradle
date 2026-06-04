@@ -20,11 +20,15 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
 
     implementation 'ch.qos.logback:logback-classic:1.5.8'
-
-
-
 }
 
 test {
     useTestNG()
+}
+
+tasks.register('qa', Test) {
+    useTestNG(){
+        suites 'src/test/resources/testng.xml'
+    }
+    
 }
