@@ -19,17 +19,17 @@ public class TestBase {
     static ApplicationManager app = new ApplicationManager
             (System.getProperty("browser", Browser.CHROME.browserName()));
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void setUp() {
         app.init();
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void startLogger(Method m) {
         logger.info("Name of method (test) -->" + m.getName());
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void end() {
         logger.info("==============================================");
     }
