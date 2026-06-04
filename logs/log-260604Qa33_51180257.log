@@ -1,7 +1,0 @@
-18:03:01.056 INFO  manager.ApplicationManager -- All tests runs in Chrome Browser
-18:03:02.174 INFO  manager.ApplicationManager -- The link --->https://telranedu.web.app/home
-18:03:02.212 INFO  manager.TestNGListener -- Start testing on date -->Thu Jun 04 18:03:02 IDT 2026
-18:03:07.276 INFO  manager.ListenerWD -- Before find element-->By.cssSelector: a[href='/login']
-18:03:07.330 INFO  manager.ListenerWD -- After find element-->By.cssSelector: a[href='/login']
-18:03:07.347 INFO  manager.ListenerWD -- Location of element-->a
-18:03:07.387 INFO  manager.ListenerWD -- Before click element -->atext-->LOGIN

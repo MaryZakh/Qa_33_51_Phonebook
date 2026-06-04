@@ -1,0 +1,74 @@
+19:36:10.711 INFO  manager.ApplicationManager -- All tests runs in Chrome Browser
+19:36:11.660 INFO  manager.ApplicationManager -- The link --->https://telranedu.web.app/home
+19:36:11.688 INFO  manager.TestNGListener -- Start testing on date -->Thu Jun 04 19:36:11 IDT 2026
+19:36:11.749 INFO  tests.TestBase -- Name of method (test) -->loginSuccess
+19:36:14.820 INFO  manager.ListenerWD -- Huston, we have a problem!
+19:36:14.821 INFO  manager.ListenerWD -- Failed method:findElements
+19:36:14.821 INFO  manager.ListenerWD -- ***************
+19:36:14.822 INFO  manager.ListenerWD -- Arguments:[By.xpath: //button[text()='Sign Out']]
+19:36:14.822 INFO  manager.ListenerWD -- ***************
+19:36:14.823 INFO  manager.ListenerWD -- Exception:NoSuchSessionException
+19:36:14.823 INFO  manager.ListenerWD -- ***************
+19:36:14.826 INFO  manager.ListenerWD -- Messageinvalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=148.0.7778.179)
+Build info: version: '4.26.0', revision: '8ccf0219d7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25f2b3bfff8f69f0409f32c63ec38fab, findElements {using=xpath, value=//button[text()='Sign Out']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\marii\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49793}, goog:processID: 14068, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49793/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25f2b3bfff8f69f0409f32c63ec38fab
+19:36:14.828 INFO  manager.ListenerWD -- ***************
+19:36:14.829 INFO  manager.ListenerWD -- ***************
+19:36:14.829 INFO  manager.ListenerWD -- Screen with error is--->src/test/screenshots/screen_1846.png
+19:36:14.944 INFO  manager.TestNGListener -- Start test -->loginSuccess
+19:36:14.945 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:14.949 INFO  manager.TestNGListener -- Start test -->loginSuccess
+19:36:14.950 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:14.953 INFO  manager.TestNGListener -- Start test -->loginSuccess
+19:36:14.954 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:14.958 INFO  manager.TestNGListener -- Start test -->loginSuccess1
+19:36:14.959 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:14.964 INFO  manager.TestNGListener -- Start test -->loginSuccessModel
+19:36:14.966 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:14.969 INFO  manager.TestNGListener -- Start test -->loginSuccessModel
+19:36:14.969 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:14.975 INFO  manager.TestNGListener -- Start test -->loginSuccessModelDPF
+19:36:14.976 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:14.978 INFO  manager.TestNGListener -- Start test -->loginSuccessModelDPF
+19:36:14.979 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:14.981 INFO  manager.TestNGListener -- Start test -->loginSuccessModelDPF
+19:36:14.982 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:14.986 INFO  manager.TestNGListener -- Start test -->loginUnregisteredUser
+19:36:14.986 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:14.990 INFO  manager.TestNGListener -- Start test -->loginWrongEmail
+19:36:14.991 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:14.995 INFO  manager.TestNGListener -- Start test -->loginWrongPassword
+19:36:14.996 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:15.003 INFO  tests.TestBase -- Name of method (test) -->registrationExistsUser
+19:36:15.012 INFO  manager.ListenerWD -- Huston, we have a problem!
+19:36:15.013 INFO  manager.ListenerWD -- Failed method:findElements
+19:36:15.013 INFO  manager.ListenerWD -- ***************
+19:36:15.014 INFO  manager.ListenerWD -- Arguments:[By.xpath: //button[text()='Sign Out']]
+19:36:15.014 INFO  manager.ListenerWD -- ***************
+19:36:15.014 INFO  manager.ListenerWD -- Exception:NoSuchSessionException
+19:36:15.014 INFO  manager.ListenerWD -- ***************
+19:36:15.014 INFO  manager.ListenerWD -- Messageinvalid session id
+Build info: version: '4.26.0', revision: '8ccf0219d7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25f2b3bfff8f69f0409f32c63ec38fab, findElements {using=xpath, value=//button[text()='Sign Out']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\marii\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49793}, goog:processID: 14068, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49793/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25f2b3bfff8f69f0409f32c63ec38fab
+19:36:15.015 INFO  manager.ListenerWD -- ***************
+19:36:15.015 INFO  manager.ListenerWD -- ***************
+19:36:15.016 INFO  manager.ListenerWD -- Screen with error is--->src/test/screenshots/screen_1744.png
+19:36:15.029 INFO  manager.TestNGListener -- Start test -->registrationExistsUser
+19:36:15.030 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:15.034 INFO  manager.TestNGListener -- Start test -->registrationSuccess
+19:36:15.034 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:15.036 INFO  manager.TestNGListener -- Start test -->registrationWrongEmail
+19:36:15.038 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:15.041 INFO  manager.TestNGListener -- Start test -->registrationWrongPassword
+19:36:15.043 INFO  manager.TestNGListener -- Skipped test -->null
+19:36:15.046 INFO  manager.TestNGListener -- Stop testing on date -->Thu Jun 04 19:36:15 IDT 2026
