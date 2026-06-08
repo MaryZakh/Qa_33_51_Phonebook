@@ -50,6 +50,10 @@ tasks.register('scope', Test) {
     useTestNG() {
         suites 'src/test/resources/scope.xml'
     }
+
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
+    }
 }
 
 tasks.register('groups', Test) {
