@@ -1,5 +1,6 @@
 package manager;
 
+import io.qameta.allure.Step;
 import models.User;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -16,6 +17,7 @@ public class HelperUser extends HelperBase {
         super(wd);
     }
 
+    @Step("Open login/registration form")
     public void openLoginRegistrationForm() {
         // wd.findElement(By.cssSelector("a[href='/login']"));
 //        WebElement loginTab = wd.findElement(By.xpath("//a[text()='LOGIN']"));
@@ -24,6 +26,7 @@ public class HelperUser extends HelperBase {
         logger.info("open form by click on button with locator a[href='/login']");
     }
 
+    @Step("Fill login/registration form with email: {email} and password: {password}")
     public void fillLoginRegistrationForm(String email, String password) {
 //        WebElement emailInput = wd.findElement(By.name("email"));
 //        emailInput.click();
@@ -41,19 +44,23 @@ public class HelperUser extends HelperBase {
         //type(By.xpath("//input[@placeholder='Passwordddd']"), password);
     }
 
+    @Step("Fill login/registration form with user {user}")
     public void fillLoginRegistrationForm(User user) {
         type(By.name("email"), user.getEmail());
         type(By.xpath("//input[@placeholder='Password']"), user.getPassword());
     }
 
+    @Step("Submit login")
     public void submitLogin() {
         click(By.xpath("//button[text()='Login']"));
     }
 
+    @Step("Check if user logged")
     public boolean isLogged() {
         return isElementPresent(By.xpath("//button[text()='Sign Out']"));
     }
 
+    @Step("Logout")
     public void logout() {
         click(By.xpath("//button[text()='Sign Out']"));
     }
