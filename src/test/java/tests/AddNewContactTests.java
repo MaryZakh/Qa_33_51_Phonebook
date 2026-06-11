@@ -41,6 +41,7 @@ public class AddNewContactTests extends TestBase {
         Assert.assertTrue(app.getHelperContact().isContactAddedByPhone(contact.getPhone()));
     }
 
+    //for Jenkins
     @Test(groups = {"smoke","regress","retest"})
     public void addNewContactSuccessRequiredFields() {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
