@@ -17,7 +17,7 @@ public class HelperContact extends HelperBase {
 
     @Step("Open contact form")
     public void openContactForm() {
-        //click(By.cssSelector("a[href='/add']"));
+        click(By.cssSelector("a[href='/add']"));
     }
 
     @Step("Fill contact form for {contact}")
