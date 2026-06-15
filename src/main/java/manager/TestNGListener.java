@@ -31,7 +31,7 @@ public class TestNGListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         ITestListener.super.onTestFailure(result);
-        logger.info("Failure test -->"+result.getTestName());
+        logger.info("Failure test -->" + result.getName());
         saveFailureAttachments(result);
     }
 

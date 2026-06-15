@@ -1,6 +1,7 @@
 package tests;
 
 import io.qameta.allure.Allure;
+import io.qameta.allure.testng.AllureTestNg;
 import manager.ApplicationManager;
 import manager.TestNGListener;
 import org.openqa.selenium.remote.Browser;
@@ -10,8 +11,7 @@ import org.testng.annotations.*;
 
 import java.lang.reflect.Method;
 
-@Listeners(TestNGListener.class)
-
+@Listeners({TestNGListener.class, AllureTestNg.class})
 
 public class TestBase {
 
