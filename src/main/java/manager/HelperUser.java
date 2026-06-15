@@ -52,7 +52,7 @@ public class HelperUser extends HelperBase {
 
     @Step("Submit login")
     public void submitLogin() {
-        click(By.xpath("//button[text()='Loginnnnn']"));
+        click(By.xpath("//button[text()='Login']"));
     }
 
     @Step("Check if user logged")
