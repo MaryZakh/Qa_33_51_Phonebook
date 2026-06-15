@@ -22,7 +22,7 @@ public class HelperUser extends HelperBase {
         // wd.findElement(By.cssSelector("a[href='/login']"));
 //        WebElement loginTab = wd.findElement(By.xpath("//a[text()='LOGIN']"));
 //        loginTab.click();
-       // click(By.cssSelector("a[href='/login']"));
+        click(By.cssSelector("a[href='/login']"));
         logger.info("open form by click on button with locator a[href='/login']");
     }
 
@@ -52,7 +52,7 @@ public class HelperUser extends HelperBase {
 
     @Step("Submit login")
     public void submitLogin() {
-        click(By.xpath("//button[text()='Login']"));
+        click(By.xpath("//button[text()='Loginnnnn']"));
     }
 
     @Step("Check if user logged")
